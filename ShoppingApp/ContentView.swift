@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var ChoosenPage = 1
+    @State public var ChoosenPage = 5
     @State private var searchText = ""
     var body: some View {
         TabView(selection: $ChoosenPage){
@@ -42,6 +42,7 @@ struct ContentView: View {
                     ProductPreview()
                     
                     AdScrollView2()
+                    ProductPreview()
                     
                 }
             }.background(Color("colorzzz"))
@@ -62,7 +63,7 @@ struct ContentView: View {
             }
             .tabItem{
                 Image(systemName: "chart.bar.doc.horizontal")
-            }.foregroundColor(.brown)
+            }.foregroundColor(.secondary)
             
                 .tag(2)
                
@@ -97,13 +98,12 @@ struct ContentView: View {
             
                 // User Page
             VStack{
-                Text("sdgmsdgm")
-                //Pagecode
+                userScreen()
                 
             }
             .tabItem{
                 Image(systemName: "person")
-            }.foregroundColor(.red)
+            }
                 
                 .tag(5)
                 

@@ -16,14 +16,14 @@ struct Categories: View{
             ForEach(self.cate, id:\.self) {
                 cates in
                 HStack{
-                    Text(cates).foregroundColor(.brown)
+                    Text(cates).foregroundColor(.black)
                     Spacer()
                     Image(systemName: "chevron.right.circle.fill")
                         
                 }.font(.system(size: 24, weight: .bold, design: .rounded))
                     .padding()
                     .cornerRadius(5)
-                    .background(.green.opacity(0.08))
+                    .background()
                     .shadow(radius: 10)
             }
             
